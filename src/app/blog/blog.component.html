@@ -1,0 +1,4 @@
+<h2>{{blogPostTitle$ | async}}</h2>
+<section [innerHTML]="blogPostContent$ | async"></section>
+
+<a [routerLink]="['/']">back</a>

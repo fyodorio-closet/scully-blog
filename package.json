@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scully": "scully",
+    "scully:serve": "scully serve",
+    "clear": "rm -rf dist",
+    "rebuild": "npm run clear && npm run build && npm run scully",
+    "serve:manually": "cd dist/static && npx http-server",
+    "reserve:manually": "npm run rebuild && npm run serve:manually"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +25,9 @@
     "@angular/platform-browser": "~9.0.0-rc.7",
     "@angular/platform-browser-dynamic": "~9.0.0-rc.7",
     "@angular/router": "~9.0.0-rc.7",
+    "@scullyio/init": "0.0.9",
+    "@scullyio/ng-lib": "latest",
+    "@scullyio/scully": "latest",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
